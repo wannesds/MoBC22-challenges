@@ -91,7 +91,7 @@ actor {
 
   //challenge 10
   public func sort(arr : [Nat]) : async [Nat] {
-    let thaw_arr = Array.thaw<Nat>(arr);
+    let thaw_arr : [var Nat] = Array.thaw<Nat>(arr);
     return Array.sort(arr, Nat.compare);
   };
 
